@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brown"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/toolbar_main">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_hourglass"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/yellow_pastel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chronometer"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/chronometer"/>
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_chronometer"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/chronometer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/imgbutton_play"
+            android:id="@+id/imgview_chronometer"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="133dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pointer_do_mau"
+            android:layout_marginTop="42dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="3dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="4dp"
+            android:rotation="0"
+            app:layout_constraintTop_toBottomOf="@id/chronometer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/imgbutton_play"
+            android:id="@+id/imgview_pointer"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stop"
+            android:backgroundTint="@color/brown"
+            app:tint="@color/yellow_pastel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgview_chronometer"
+            app:layout_constraintEnd_toStartOf="@+id/imgbutton_play"
+            android:id="@+id/imgbutton_stop"
+            android:layout_marginStart="120dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:backgroundTint="@color/brown"
+            app:tint="@color/yellow_pastel"
+            app:layout_constraintTop_toBottomOf="@id/imgview_chronometer"
+            app:layout_constraintStart_toEndOf="@id/imgbutton_stop"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/imgbutton_play"
+            android:layout_marginEnd="120dp"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/brown"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_menu_chronometer"
+                app:tint="@color/yellow_pastel"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="130dp"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_menu_timer"
+                app:tint="@color/yellow_pastel"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="250dp"/>
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
